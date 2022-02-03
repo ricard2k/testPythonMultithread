@@ -4,8 +4,9 @@ I was working in an intensive calculation project. And trying to divide it in th
 
 Seems that the python interpreter has a Global Interpreter Lock (GIL) that protects its own execution to be multithread. It is funny, because this not isolate you to enter in a run condition, but makes the multithreading execution slower than serial execution. More info in: http://jessenoller.com/blog/2009/02/01/python-threads-and-the-global-interpreter-lock
 
+Multithreading in python can help with IO wait states, but it is not a solution to divide compute loads.
 
-The solution is to use the [Python's multiprocessing module](http://docs.python.org/library/multiprocessing.html)
+The solution is to use the [Python's multiprocessing module](http://docs.python.org/library/multiprocessing.html). But this create new processes, with all the advantages and disadvantages.
 
 ## Testing code
 
